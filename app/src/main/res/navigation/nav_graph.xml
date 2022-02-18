@@ -3,26 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/MovieListFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.movieapp.FirstFragment"
+        android:id="@+id/MovieListFragment"
+        android:name="com.example.movieapp.MovieListFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_movie_list">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_MovieListFragment_to_MovieDetailFragment"
+            app:destination="@id/MovieDetailFragment" />
+
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.movieapp.SecondFragment"
+        android:id="@+id/MovieDetailFragment"
+        android:name="com.example.movieapp.MovieDetailFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_movie_detail">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_MovieDetailFragment_to_MovieListFragment"
+            app:destination="@id/MovieListFragment" />
     </fragment>
 </navigation>
